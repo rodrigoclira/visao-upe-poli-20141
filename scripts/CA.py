@@ -196,18 +196,20 @@ def doConvexityApproach(img, lenght):
 
 #    pdb.set_trace()
 
-    #cnt = contours[0] # 
+    cnt = contours[0] # 
 
-    points = []
-    for cnt in contours:
-        points.extend(part2(cnt))
+#    points = []
+#    for cnt in contours:
+#        points.extend(part2(cnt))
+    
         
     # Se nao tiver contorno, pega o que tiver a maior area
-#    for i in range(len(contours)):
-#        if(cv2.contourArea(cnt) < cv2.contourArea(contours[i])):
-#           cnt = contours[i]
+    for i in range(len(contours)):
+        if(cv2.contourArea(cnt) < cv2.contourArea(contours[i])):
+           cnt = contours[i]
 
     
+    points = part2(cnt)
 #    points = part2(cnt)
     points = amplitudeNormalization(points)
     points = lenghtNormalization(points,lenght)

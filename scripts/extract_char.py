@@ -8,11 +8,11 @@ FOLDER = 'test'
 
 
 if __name__ == '__main__':
-    files = glob(FOLDER + sep + "*.png")
+    files = glob('..' + sep + FOLDER + sep + "*.png")
 #    print files
     files.reverse()
-    feat = open('features.txt','w')
-    classes = open('classes.txt','w')
+    feat = open('clcs_features.txt','w')
+    classes = open('clcs_classes.txt','w')
     
     lines_feat = []
     lines_classes = []
@@ -23,7 +23,7 @@ if __name__ == '__main__':
             points = doConvexityApproach(image, LEN)
         
             filename, fileextension  = path.splitext(image)
-            classe = filename.split('_')[0].split('/')[1]
+            classe = filename.split('/')[-1].split('_')[0]
             #charfile = open(filename + '.chr','w')
             points = "".join(map(lambda x: '%f ' % x, points)).strip()
             lines_feat.append(points + '\n')
