@@ -34,5 +34,5 @@ if __name__ == '__main__':
     for image in files:
 #        print files
         filename = image.split('/')[1]
-        add_border(image, 'test_border/' +  filename)
+        add_border(image, 'test_border_bmp/' +  filename.split('.')[0]+ '.bmp')
 
