@@ -6,8 +6,8 @@ classes = list(lowercase + uppercase)
 
 print classes
 
-classes_file = open('clcs/classes.txt')
-coded_classes_file = open('clcs/coded_classes.txt','w')
+classes_file = open('clcs_classes.txt')
+coded_classes_file = open('clcs_coded_classes.txt','w')
 
 list_codeds = []
 for line in classes_file:
