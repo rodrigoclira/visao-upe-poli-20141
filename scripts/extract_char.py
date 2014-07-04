@@ -3,8 +3,8 @@ from glob import glob
 from os import sep
 from os import path
 
-LEN = 25
-FOLDER = 'test'
+LEN = 10
+FOLDER = 'test_border'
 
 
 if __name__ == '__main__':
